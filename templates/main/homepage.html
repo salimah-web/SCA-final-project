@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block menu_list %}
+    <li class="home"><a href="{{ url_for('homepage') }}" class="active">Home</a></li>
+    <li class="food"><a href="{{ url_for('food') }}">Food</a></li>
+    <li class="product"><a href="{{ url_for('product') }}">Products</a></li>
+    
+{% endblock %}
+{% block body %}
+<!-------- BANNER IMAGE CONTAINER -------->
+<section class="banner_image_container">
+    <!-------- BANNER IMAGE SECTION 1 -------->
+    <div class="banner__image__1">
+        <a href="{{ url_for('food') }}" class="order__now">VIEW FOODS</a>
+        <a href="{{ url_for('learnmore') }}" class="learn__more">LEARN MORE</a>
+    </div>
+    <!-------- BANNER IMAGE SECTION 1 -------->
+
+    <!-------- BANNER IMAGE SECTION 2 -------->
+    <div class="banner__image__2">
+        <a href="{{ url_for('product') }}"  class="see_products">PRODUCTS CATEGORIES</a>
+    </div>
+    <!-------- BANNER IMAGE SECTION 2 -------->
+</section>
+<!--x----- BANNER IMAGE CONTAINER -----x-->
+
+<!-------- NEW SECTION -------->
+<section class="section__container">
+    <h2>NEW PRODUCTS</h2>
+    <div class="new__container">
+       <img src="{{ url_for('static', filename='assets/images/pexels-zen-chung-5529926.jpg') }}" class="new_product" alt="">
+       <img src="{{ url_for('static', filename='assets/images/pexels-zen-chung-5529768.jpg') }}" class="new_product" alt="">
+       <img src="{{ url_for('static', filename='assets/images/pexels-zen-chung-5529766.jpg') }}" class="new_product" alt="">
+       <img src="{{ url_for('static', filename='assets/images/pexels-ryutaro-tsukata-5472410.jpg') }}" class="new_product" alt="">
+    </div>
+</section>
+<!--x----- NEW SECTION -----x-->
+
+<!-------- SHOP BY CATEGORY SECTION -------->
+<section class="section__container">
+    <h2>FOOD CATEGORY</h2>
+    <!-------- EYE SECTION -------->
+    <div class="basic_section">
+       <span class="left__side">BASIC</span>
+    </div>
+    <!--x----- EYE SECTION -----x-->
+
+    <!-------- LIPS SECTION -------->
+    <div class="staple_section">
+        <span class="right__side">STAPLE</span>
+    </div>
+    <!--x----- LIPS SECTION -----x-->
+
+    <!-------- POWDER SECTION -------->
+    <div class="prepared_section">
+        <span class="left__side">PREPARED</span>
+    </div>
+    <!--x----- POWDER SECTION -----x-->
+
+    <!-------- TOOLS SECTION -------->
+    <!-- <div class="tools_section">
+        <span class="right__side">TOOLS</span>
+        </div> -->
+    <!--x----- TOOLS SECTION -----x-->
+</section>
+<!--x----- SHOP BY CATEGORY SECTION -----x-->
+{% endblock %}

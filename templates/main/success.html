@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block extra_title %}
+    <title>Payment Successful</title>
+{% endblock %}
+
+{% block body %}
+<h1 style="text-align: center;">Thanks for your order!</h1>
+<h2 style="text-align: center;">
+  We appreciate your business! We'll contact you through
+    you mail for an effective delivery of the product to you
+  <p>Return to the homepage
+      <a href="{{url_for('homepage')}}" style="color: blue;">Homepage</a>.
+  </p>
+</h2>
+{% endblock %}

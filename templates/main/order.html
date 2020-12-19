@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block menu_list %}
+    <li class="home"><a href="{{ url_for('homepage') }}">Home</a></li>
+    <li class="food"><a href="{{ url_for('food') }}">Food</a></li>
+    <li class="product"><a href="{{ url_for('product') }}">Products</a></li>
+    
+
+    {% endblock %}
+{% block extra_title %}
+    <title>Buy cool new product</title>
+{% endblock %}
+{% block body %}
+<!-------- ORDER CONTAINER -------->
+<section class="top__container__order">
+    <h2>ORDER</h2>
+    <h3 style="text-align: center;">Note: This is a project so do not put your credit card details
+    Use: 4242 4242 4242 4242 for credit card number and any number
+    for the expiry date (a date higher than your present date) and CVV.</h3>
+    <div class="order__container">
+        <div class="image__product">
+            <div> <a href="{{ url_for('food') }}"> &#x25c0; back</a> </div>
+            <img src="{{ url_for('uploaded_file', filename=item.image_name) }}" class="image__productz" alt="">
+            <div class="small__images">
+                <!-- <div class="si1"></div>
+                <div class="si2"></div>
+                <div class="si3"></div>
+                <div class="si4"></div> -->
+            </div>
+        </div>
+        <div class="image__details">
+            <div class="image__name">{{ item.name }} </div>
+            <div class="image__pricez">$ {{ item.price }}</div>
+            <div class="image__quanty">
+                QUANTITY <input type="number" class="quan__number" min="1" value="1"> 
+            </div>
+<!--             &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45; FORM COLUMN  &#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;                   -->
+<!--                                    -->
+<!--              <p class="input-width">-->
+<!--                <label for="address"> ADDRESS -->
+<!--                    <span>-->
+<!--                        <i class="fas fa-question-circle" title="please enter your contact address or that of the responsible party responsible for your project."></i>-->
+<!--                    </span>-->
+<!--                    </label>-->
+<!--                    <input type="text" id="address" placeholder="Address" title="please enter your contact address or that of the responsible party responsible for your project.">-->
+<!--              </p>-->
+<!--              <p class="input-width">-->
+<!--                <label for="country"> COUNTRY -->
+<!--                <span>-->
+<!--                    <i class="fas fa-question-circle" title="please enter the country for the state and postal code supplied above."></i>-->
+<!--                </span>-->
+<!--                </label>-->
+<!--                <input type="text" id="country" placeholder="Country" title="please enter the country for the state and postal code supplied above.">-->
+<!--                </p>-->
+<!--             -->
+<!--              <p class="input-width">-->
+<!--                <label for="state"> STATE -->
+<!--                    <span>-->
+<!--                        <i class="fas fa-question-circle" title="please enter the state where the company or responsible party for this project resides in."></i>-->
+<!--                    </span>-->
+<!--                    </label>-->
+<!--                    <input type="text" id="state" placeholder="State" title="please enter the state where the company or responsible party for this project resides in.">-->
+<!--                   -->
+<!--             </p>-->
+<!--             <p class="input-width">-->
+<!--                <label for="city"> CITY -->
+<!--                    <span>-->
+<!--                        <i class="fas fa-question-circle" title="please enter the name of the city where the company or the responsible party for this project resides."></i>-->
+<!--                    </span>-->
+<!--                    </label>-->
+<!--                    <input type="text" id="city" placeholder="City" title="please enter the name of the city where the company or the responsible party for this project resides.">-->
+<!--              -->
+<!--              </p>                           -->
+<!--             <p class="input-width">-->
+<!--                <label for="postalcode"> POSTAL CODE -->
+<!--                    <span>-->
+<!--                        <i class="fas fa-question-circle" title="please enter the postal code for the address supplied."></i>-->
+<!--                    </span>-->
+<!--                    </label>-->
+<!--                    <input type="number" id="postalCode" placeholder="Postal Code" title="please enter the postal code for the address supplied.">                   -->
+<!--              <span id="postalCode_error"></span>-->
+<!--             </p>                              -->
+<!--            -->
+<!--          -->
+      <!--x----- FORM COLUMN -----x-->
+            <div class="image__btn">
+                <!-- <a href="#" class="order__now2">PROCEED TO PAYMENT</a> -->
+                <button id="checkout-button" class="order__now2">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Create an instance of the Stripe object with your publishable API key
+        var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+        var checkoutButton = document.getElementById('checkout-button');
+        checkoutButton.addEventListener('click', function() {
+          // Create a new Checkout Session using the server-side endpoint you
+          // created in step 3.
+          const quantity = document.querySelector('input.quan__number').value;
+          fetch(`/create-checkout-session/{{ item.id }}/${quantity}/`, {
+            method: 'POST',
+          })
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(session) {
+            return stripe.redirectToCheckout({ sessionId: session.id });
+          })
+          .then(function(result) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, you should display the localized error message to your
+            // customer using `error.message`.
+            if (result.error) {
+              alert(result.error.message);
+            }
+          })
+          .catch(function(error) {
+            console.error('Error:', error);
+          });
+        });
+      </script>
+
+</section>
+<!--x----- ORDER CONTAINER -----x-->
+{% endblock %}

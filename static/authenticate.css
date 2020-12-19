@@ -1,0 +1,63 @@
+@import url("cssvariable.css");
+
+* {
+    box-sizing: border-box;
+}
+
+.authenticate-container {
+    max-width: 900px;
+    margin: auto;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted #333;
+    margin-bottom: 20px;
+}
+    .authenticate-container h2 {
+        margin-bottom: 5px;
+    }
+    .authenticate-container a {
+        color: #00f;
+    }
+      .authenticate-container a:hover {
+        color: #009;
+      }
+
+.authenticate-container .form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 10px 35px 10px;
+    padding: 10px;
+}
+
+.authenticate-container .input-container {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.authenticate-container .input-container label {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.authenticate-container .form-input {
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #333;
+}
+
+button.login-button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid #333;
+}
+
+.login-button:hover {
+    background-color: #333;
+    color: white;
+}

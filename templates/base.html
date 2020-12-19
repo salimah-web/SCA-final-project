@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD DISTRIBUTION</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='assets/images/DTLOGO.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cssvariable.css') }}">
+    <!-------- FONT-AWESOME LINK -------->
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free-5.15.1-web/css/all.min.css') }}">
+    <!--x----- FONT-AWESOME LINK -----x-->
+    <script src="https://js.stripe.com/v3/"></script>
+    {% block extra_head %}
+    {% endblock %}
+</head>
+<body>
+    <!-------- BEGINING OF WEBSITE -------->
+    <div class="wrapper__container">
+        <!-------- LOGIN AND REGISTER SECTION -------->
+        <div class="login_register_container">
+            {% if session.logged_in %}
+            <div class="link_login">
+                <span><i class="fas fa-sign-in-alt"></i></span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+            {% else %}
+            <div class="link_register">
+                <span><i class="fas fa-user-circle"></i></span>
+                 <a href="{{ url_for('register') }}">Register</a>
+            </div>
+            <div class="link_login">
+                <span><i class="fas fa-sign-in-alt"></i></span>
+                <a href="{{ url_for('login') }}">Login</a>
+            </div>
+            {% endif %}
+        </div>
+        <!--x----- LOGIN AND REGISTER SECTION -----x-->
+        <span class="horizontal__line"></span>
+         <!-------- LOGO, SEARCH AND ICONS SECTION -------->
+        
+           
+            <!-------- NAVIGATION MENU SECTION -------->
+            <nav class="main_nav">
+                <div class="content">
+                <a href="{{ url_for('homepage') }}">
+                    <img src="{{ url_for('static', filename='assets/images/DTLOGO.jpg') }}" class="luxeBeautyHouseLogo" alt="LuxeBeauty House Logo">
+                </a>
+                <div class="menu_link">
+                {% block menu_list %}
+                    <li class="home"><a href="{{ url_for('homepage') }}" class="active">Home</a></li>
+                    <li class="food"><a href="{{ url_for('food') }}">Food</a></li>
+                    <li class="product"><a href="{{ url_for('product') }}">Products</a></li>                    
+                   
+                    {% endblock %}
+                </div>  
+                <i class="fas fa-times"></i>   
+                <i class="fas fa-bars" onclick="menu()"></i>                
+            </div>
+            <div class="dropdown">
+                 
+                <li class="home"><a href="{{ url_for('homepage') }}" class="active">Home</a></li>
+                <li class="food"><a href="{{ url_for('food') }}">Food</a></li>
+                <li class="product"><a href="{{ url_for('product') }}">Products</a></li>
+               
+            </div>
+            </nav>
+        <!--x----- NAVIGATION MENU SECTION -----x-->
+       
+    </div>
+    <!--x----- LOGO, SEARCH AND ICONS SECTION -----x-->
+
+    {% block body %}
+    {% endblock %}
+    <!-------- FOOTER SECTION -------->
+    <footer>
+    <div class="footer__content" >
+        <div class="column__1">
+            <p>Get In Touch</p>
+            <div>The foods included in the PowerFuels group include high-quality proteins that contain essential amino acids as well as nuts and nut butters that contain healthy fats. </div>
+            </div>
+
+        <div class="column__2">
+            <p>Information</p>
+            <div><a href="#">Delivery Information</a></div>
+            <div><a href="#">Order & Returns</a></div>
+        </div>
+
+        <div class="column__3">
+            <p>Contact Us</p>
+            <div><span><i class="fab fa-whatsapp"></i></span>+234-803-114-3356</div>
+            <div><i class="far fa-envelope"></i>dthes.tekh@gmail.com</div>
+            <div> <i class="fab fa-instagram"></i>  <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter-square"></i></div>
+       
+            <!-- <div>
+                <input type="text" name="" id="" placeholder="Enter your email here">
+
+            </div>
+            <div><a href="#">SUBSCRIBE</a></div> -->
+        </div>
+    </div>
+    </footer>
+    <!--x----- FOOTER SECTION -----x-->
+<script src="{{ url_for('static', filename='menu.js') }}"></script>
+</body>
+</html>

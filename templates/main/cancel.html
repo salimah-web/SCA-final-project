@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block extra_title %}
+    <title>Payment Error</title>
+{% endblock %}
+
+{% block body %}
+<h1>An error occurred while trying to pay.
+    Try Again Later...</h1>
+<p>
+  We appreciate your business!
+  Return to the homepage
+  <a href="{{url_for('homepage')}}">Homepage</a>.
+</p>
+{% endblock %}

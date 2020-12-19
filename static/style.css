@@ -1,0 +1,1091 @@
+/*-------- CSS VARIABLE LINK --------*/
+@import url("cssvariable.css");
+/*-------- CSS VARIABLE LINK --------*/
+
+/*--------  --------*/
+/*--x-----  -----x--*/
+
+/*-------- GLOBAL VARIABLE --------*/
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: var(--light); */
+}
+
+a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    background: var(--light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+li.error {
+    color: red;
+}
+li.success {
+    color: green;
+}
+li.info {
+    color: yellow;
+}
+
+/*-------- LOGIN AND REGISTER SECTION --------*/
+.login_register_container{
+display: grid;
+grid-template-columns: repeat(7,1fr);
+grid-gap: .2rem;
+padding: 0;
+margin-top: .4rem;
+
+}
+
+.login_register_container a{
+    color: var(--dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--dark);
+    list-style-type: none;
+}
+
+.link_register{
+grid-area: 1/6/2/7;
+padding-right: .2rem;
+}
+
+.link_login{
+    grid-area: 1/7/2/8;
+    padding-right: 1rem;
+}
+
+/*--x----- LOGIN AND REGISTER SECTION -----x--*/
+
+.horizontal__line{
+    border: .1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 99.9%;
+}
+
+/*-------- LOGO, SEARCH AND ICONS SECTION --------*/
+.logo_search_icon{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: .2rem;
+    margin-top: 1.2rem;
+}
+
+/*-------- LOGO --------*/
+.luxeBeautyHouseLogo{
+    max-width: 40rem;
+    height: 60%;
+    margin-left: 10rem;
+}
+/*--x----- LOGO -----x--*/
+
+.banner_image_container{
+    margin-bottom: 3rem;
+}
+
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+}
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+/*-------- MAIN-BANNER ICON CONTAINER --------*/
+
+/*--x----- MAIN-BANNER ICON CONTAINER -----x--*/
+
+/*-------- CART ICON --------*/
+
+/*--x----- CART ICON -----x--*/
+
+/*-------- FAVOURITE ICON --------*/
+
+/*--x----- FAVOURITE ICON -----x--*/
+
+/*-------- WHATSAPP ICON --------*/
+
+/*--x----- WHATSAPP ICON -----x--*/
+
+.fas , .far, .fab {
+    font-size: 1.2rem;
+    
+}
+
+.fas{
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+/*--x----- LOGO, SEARCH AND ICONS SECTION -----x--*/
+
+/*-------- MAIN NAVIGATION CONTAINER SECTION --------*/
+.main_navigation{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+/*--x----- MAIN NAVIGATION CONTAINER SECTION -----x--*/
+
+/*-------- MAIN NAVIGATION LINK --------*/
+
+/*--x----- MAIN NAVIGATION LINK -----x--*/
+nav{
+    display: grid;
+    grid-template-rows: minmax(min-content, 100px) min-content;
+    height: 10rem;
+}
+
+nav .content{
+    background-color: var(--dark);
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    align-content: space-evenly;
+}
+
+ .fa-bars{
+     color: var(--light);
+     font-size: 3rem;
+ }
+
+ .fa-times{
+    color: var(--light);
+    font-size: 3rem;
+    visibility: hidden;
+ }
+
+ nav .dropdown{
+     visibility: hidden;
+ }
+ /* nav .content .fa-bars{
+   display: none;
+} */
+
+ nav .content .fa-bars:hover{
+     filter: opacity(50%);
+     cursor: pointer;
+     user-select: none;
+     -webkit-user-select: none;
+}
+
+nav .content .menu_link{
+    display: grid;
+    grid-gap: 3rem;
+    place-items: center;
+    color: var(--light);
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1rem;
+    padding: 2rem;
+    margin: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(min-content, 100px);
+}
+
+.nav .content .menu_link a{
+padding: 4rem;
+}
+
+nav .dropdown{
+    display: grid;
+    background-color: var(--dark);
+    text-align: center;
+    grid-gap: 2rem;
+    list-style-type: none;
+}
+
+nav .dropdown a{
+    text-decoration: none;
+    color: var(--light);
+    padding: 1.2rem;
+    list-style-type: none;
+    margin: 2rem;
+}
+nav .content a{
+    text-decoration: none;
+    list-style-type: none;
+    padding: .7rem;
+}
+nav .content a:hover{
+    background-color: var(--light); 
+    color: var(--dark);
+}
+
+nav .dropdown a:hover{
+    text-decoration: none;
+    list-style-type: none;
+    background-color: var(--light); 
+    color: var(--dark);
+}
+
+/*-------- MAIN NAVIGATION TAB SECTION --------*/
+.menu_list{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 1rem;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    color: white;
+}
+
+.menu_link li a {
+    color: white;
+}
+
+.main_navigation a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.main_navigation .active{
+    padding: 1.5rem 1.5rem 1.45rem 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: dimgray;
+    color: var(--light);
+}
+/*--x----- MAIN NAVIGATION TAB SECTION -----x--*/
+
+/*--------  --------*/
+/*--x-----  -----x--*/
+
+/*-------- GLOBAL VARIABLE --------*/
+
+/*-------- BANNER IMAGE 1 --------*/
+.banner__image__1{
+    height: 100vh;
+    background: url('./assets/images/pexels-ella-olsson-1640771.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+}
+/*--x----- BANNER IMAGE 1 -----x--*/
+
+/*-------- BANNER IMAGE 2 --------*/
+.banner__image__2{
+    min-height: 40rem;
+    background: url('./assets/images/pexels-oleg-magni-1005638.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-gap: .5rem;
+}
+/*--x----- BANNER IMAGE 2 -----x--*/
+
+/*-------- BANNER IMAGE 1 BUTTON --------*/
+.order__now{
+    background: var(--buttonbackground);
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/2/7/3;
+}
+
+.learn__more{
+    background: var(--light);
+    color: var(--dark);
+
+    text-decoration: none;
+    text-align: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/3/7/4;
+}
+/*--x----- BANNER IMAGE 1 BUTTON -----x--*/
+
+/*-------- BANNER IMAGE 2 BUTTON --------*/
+.see_products{
+    background: var(--buttonbackground);
+    color: var(--light);
+
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/2/7/3;
+}
+/*--x----- BANNER IMAGE 2 BUTTON -----x--*/
+
+/*-------- NEW PRODUCTS SECTION --------*/
+.new__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .1rem;
+    padding-left: 4rem;
+
+}
+
+.new_product{
+    max-width: 90%;
+    height: 80%;
+}
+
+.all_product{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background: var(--buttonbackground);
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+}
+/*--x----- NEW PRODUCTS SECTION -----x--*/
+
+/*-------- BASIC FOOD SECTION --------*/
+.basic_section{
+    min-height: 20rem;
+    background: url('./assets/images/pexels-maria-orlova-4913534.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+/*--x----- BASIC FOOD SECTION -----x--*/
+
+/*-------- STAPLE FOOD SECTION --------*/
+.staple_section{
+    min-height: 20rem;
+    background: url('./assets/images/pexels-ryutaro-tsukata-5472406.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+/*--x----- STAPLE FOOD SECTION -----x--*/
+
+/*-------- PREPARED FOOD SECTION --------*/
+.prepared_section{
+    min-height: 20rem;
+
+    background: url('./assets/images/pexels-any-lane-5728281.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+/*--x----- PREPARED FOOD SECTION -----x--*/
+
+/*-------- LEFT SIDE FOOD SECTION --------*/
+.left__side{
+    grid-area: 6/1/7/2;
+    padding: 1.2rem 2rem 1.2rem 2rem;
+    background-color: var(--dark);
+    margin-right: 10rem;
+    font-size: 2rem;
+    color: var(--light);
+}
+/*--x----- LEFT SIDE FOOD SECTION -----x--*/
+
+/*-------- RIGHT SIDE FOOD SECTION --------*/
+.right__side{
+    grid-area: 6/4/7/5;
+    text-align: end;
+    padding: 1.2rem 2rem 1.2rem 2rem;
+    background-color: var(--dark);
+    margin-left: 10rem;
+    font-size: 2rem;
+    color: var(--light);
+}
+/*--x----- RIGHT SIDE FOOD SECTION -----x--*/
+
+/*-------- FOOTER SECTION --------*/
+footer{
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.footer__content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    
+}
+
+.column__1{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);    
+}
+
+.column__2{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);    
+}
+
+.column__2 a, .column__3 a{
+    color: var(--light);
+}
+
+.column__3{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);    
+}
+
+.fab, .far{
+    margin-right: 1rem;
+}
+
+.footer__content p{
+    font-size: 2rem;
+}
+/*--x----- FOOTER SECTION -----x--*/
+
+/*-------- FOOD DETAILS --------*/
+.food__types{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+margin-left: 5rem;
+margin-right: 2rem;
+grid-gap: .5rem;
+}
+
+.food__image{
+    width: 25rem;
+    height: 20rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);;
+}
+
+.buy__now{
+    background: var(--buttonbackground);
+    color: var(--light);
+    text-decoration: none;
+    text-align: end;
+    align-items: flex-end;
+    margin-left: 10.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;  
+    grid-area: 1/2/2/3; 
+}
+
+.food__details{
+   display: grid;
+   grid-template-rows: repeat(3,1fr);
+   grid-gap: .2rem;
+}
+
+.food__details__price{
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-right: 3rem;
+   padding-right: 20rem;
+}
+/*--x----- FOOD DETAILS -----x--*/
+
+/*-------- IMAGE PRODUCT SECTION --------*/
+.order__container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: .5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.image__productz{
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+}
+
+.image__product{
+    align-items: center;
+    align-content: center;
+}
+
+.small__images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: .2rem;
+    
+}
+
+.si1{
+    min-height: 10rem;
+    width: 30%;
+    background: url('./assets/images/pexels-ella-olsson-1640771.jpg');
+    background-size: cover;
+    background-position: center;   
+}
+
+.si2{
+    min-height: 10rem;
+    width: 30%;
+    background: url('./assets/images/pexels-ella-olsson-1640771.jpg');
+    background-size: cover;
+    background-position: center;   
+}
+
+.si3{
+    min-height: 10rem;
+    width: 30%;
+    background: url('./assets/images/pexels-ella-olsson-1640771.jpg');
+    background-size: cover;
+    background-position: center;   
+}
+
+.si4{
+    min-height: 10rem;
+    width: 30%;
+    background: url('./assets/images/pexels-ella-olsson-1640771.jpg');
+    background-size: cover;
+    background-position: center;   
+}
+
+.image__details{
+   display: grid;
+   grid-template-rows: repeat(9,1fr);
+   grid-gap: .1rem;
+   background-color: var(--light);
+   color: var(--dark);
+   padding: 0;
+   margin: 0;
+}
+
+.image__name{
+    font-size: 3rem;
+}
+
+.image__pricez{
+    font-size: 2rem;
+}
+
+.image__quanty{
+    font-size: 2rem;
+}
+
+.quan__number{
+    font-size: 2rem;
+    width: 8%;
+}
+
+input{
+    width: 18rem;
+    height: 3rem;
+    border: 1px solid #000;
+  }
+
+ label{
+   font-size: 2rem;
+    margin-bottom: 1em;
+  }
+
+
+
+.order__now2{
+    background: var(--buttonbackground);
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    height: 1.6rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding-top: .6rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/2/7/3;
+}
+
+.order__now2:hover{
+    background: var(--light);
+    color: var(--buttonbackground);
+    border: 1px solid var(--buttonbackground);
+}
+/*--x----- IMAGE PRODUCT SECTION -----x--*/
+
+/*-------- MEDIA QUERIES FOR 700PX --------*/
+@media(max-width: 700px){
+
+    nav .content .menu_link{
+        display: none;
+    }
+
+    nav .dropdown{
+        visibility: visible;
+    }
+
+    .login_register_container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: .2rem;
+        padding: 0;
+        margin-top: .4rem;
+
+    }
+
+    .link_register{
+        grid-area: 1/1/2/2;
+        align-items: center;
+        margin-left: 12rem;
+        /* padding-right: .2rem; */
+        }
+        
+        .link_login{
+            grid-area: 2/1/3/2;
+            align-items: center;
+            margin-left: 12rem;
+            /* padding-right: 1rem; */
+        }
+
+        /*-------- BANNER IMAGE 1 --------*/
+.banner__image__1{
+    height: 100vh;
+    background: url('./assets/images/pexels-ella-olsson-1640771.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+}
+
+/*-------- BANNER IMAGE 1 BUTTON --------*/
+.order__now{
+    background: var(--buttonbackground);
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/1/7/2;
+}
+
+.learn__more{
+    grid-area: 7/1/8/2;
+    background: var(--light);
+    color: var(--dark);
+    text-decoration: none;
+    text-align: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    
+}
+
+/*-------- BANNER IMAGE 2 --------*/
+.banner__image__2{
+    min-height: 40rem;
+    background: url('./assets/images/pexels-oleg-magni-1005638.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-gap: .5rem;
+}
+/*--x----- BANNER IMAGE 2 -----x--*/
+
+/*-------- BANNER IMAGE 2 BUTTON --------*/
+.see_products{
+    background: var(--buttonbackground);
+    color: var(--light);
+
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/1/7/2;
+}
+/*--x----- BANNER IMAGE 2 BUTTON -----x--*/
+
+/*-------- MAIN NAVIGATION TAB SECTION --------*/
+.menu_list{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-gap: 1rem;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    color: white;
+}
+
+.footer__content{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: .4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;   
+}
+
+.food__types{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    /* grid-template-rows: repeat(3,1fr); */
+    margin-left: .5rem;
+    margin-right: .5rem;
+    /* grid-gap: .5rem; */
+}
+
+    .logo_search_icon{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: .2rem;
+        margin-top: 1.2rem;
+    }
+
+    .order__container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: .5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .top__container{
+        margin-top: 16rem;
+    }
+
+    .top__container__order{
+        margin-top: 18rem;
+    }
+/*--x----- BANNER IMAGE 1 -----x--*/
+
+
+/*-------- BUTTON  --------*/
+
+.form {
+    background: var(--Text-Color)
+  }
+  
+.form__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+.form__item label {
+    display: block;
+    margin-bottom: 1em;
+  }
+.form__item p {
+    margin: 0;
+  }
+  
+  .full-width {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  
+  button,
+  input,
+  textarea {
+    padding: 1em;
+  }
+  
+/*--x----- BUTTON  -----x--*/
+
+}
+/*-------- MEDIA QUERIES FOR 700PX--------*/
+
+/*-------- MEDIA QUERIES FOR 500PX --------*/
+@media(max-width: 500px){
+
+    .banner_image_container{
+        padding-left: 3rem;
+    }
+
+.wrapper__container{
+    margin-left: 5rem;
+}
+    nav .content .menu_link{
+        display: none;
+    }
+
+    nav .dropdown{
+        visibility: visible;
+    }
+
+    .login_register_container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: .2rem;
+        padding: 0;
+        margin-top: .4rem;
+
+    }
+
+    .link_register{
+        grid-area: 1/1/2/2;
+        align-items: center;
+        margin-left: 10rem;
+        /* padding-right: .2rem; */
+        }
+        
+        .link_login{
+            grid-area: 2/1/3/2;
+            align-items: center;
+            margin-left: 10rem;
+            /* padding-right: 1rem; */
+        }
+
+        /*-------- BANNER IMAGE 1 --------*/
+.banner__image__1{
+    height: 100vh;
+    background: url('./assets/images/pexels-ella-olsson-1640771.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+}
+
+.banner__about__1{
+    height: 100vh;
+    background: url('./assets/images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 1.5rem;
+}
+/*-------- BANNER IMAGE 1 BUTTON --------*/
+.order__now{
+    background: var(--buttonbackground);
+    color: var(--light);
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/1/7/2;
+}
+
+.learn__more{
+    grid-area: 7/1/8/2;
+    background: var(--light);
+    color: var(--dark);
+    text-decoration: none;
+    text-align: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    
+}
+
+/*-------- BANNER IMAGE 2 --------*/
+.banner__image__2{
+    min-height: 40rem;
+    background: url('./assets/images/pexels-oleg-magni-1005638.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-gap: .5rem;
+}
+/*--x----- BANNER IMAGE 2 -----x--*/
+
+/*-------- BANNER IMAGE 2 BUTTON --------*/
+.see_products{
+    background: var(--buttonbackground);
+    color: var(--light);
+
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    height: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    border-radius: 2rem;
+    border: 0;
+    grid-area: 6/1/7/2;
+}
+/*--x----- BANNER IMAGE 2 BUTTON -----x--*/
+
+/*-------- MAIN NAVIGATION TAB SECTION --------*/
+.menu_list{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-gap: 1rem;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    color: white;
+}
+
+.footer__content{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: .4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;   
+}
+
+.food__types{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    /* grid-template-rows: repeat(3,1fr); */
+    margin-left: .5rem;
+    margin-right: .5rem;
+    /* grid-gap: .5rem; */
+}
+
+    .logo_search_icon{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: .2rem;
+        margin-top: 1.2rem;
+    }
+
+    .order__container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: .5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .top__container{
+        margin-top: 16rem;
+    }
+
+    .top__container__order{
+        margin-top: 18rem;
+    }
+/*--x----- BANNER IMAGE 1 -----x--*/
+
+
+/*-------- BUTTON  --------*/
+
+.form {
+    background: var(--Text-Color)
+  }
+  
+.form__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+.form__item label {
+    display: block;
+    margin-bottom: 1em;
+  }
+.form__item p {
+    margin: 0;
+  }
+  
+  .full-width {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  
+  button,
+  input,
+  textarea {
+    padding: 1em;
+  }
+  
+/*--x----- BUTTON  -----x--*/
+
+}
+/*-------- MEDIA QUERIES FOR 500PX--------*/

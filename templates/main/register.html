@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='authenticate.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="authenticate-container">
+    <h2>Register to purchase cheap and amazing product</h2>
+    <form class="form-control" method="post" action="{{ url_for('register') }}">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                {% for category, message in messages %}
+                    <li class="{{category}}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <div class="input-container">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" class="form-input" required>
+        </div>
+        <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" class="form-input" required>
+        </div>
+        <div class="input-container">
+            <label for="contact-no">Contact No:</label>
+            <input type="text" name="contact_no" id="contact-no" class="form-input" required>
+        </div>
+        <div class="input-container">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" class="form-input" required>
+        </div>
+        <button type="submit" class="login-button">Register Now</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block menu_list %}
+    <li class="home"><a href="{{ url_for('homepage') }}" class="active">Home</a></li>
+    <li class="food"><a href="{{ url_for('food') }}">Food</a></li>
+    <li class="product"><a href="{{ url_for('product') }}">Products</a></li>
+    
+{% endblock %}
+{% block body %}
+<!-------- BANNER IMAGE CONTAINER -------->
+<section class="top__container">
+    <div class="banner__image__1">
+        
+    </div>
+<div class="learn__more">
+<p>
+    fast food is the term given to food that is prepared and served very quickly, first popularized in the 1950s in the United States. While any meal with low preparation time can be considered fast food, typically the term refers to food sold in a restaurant or store with preheated or precooked ingredients, and served to the customer in a packaged form for take-out/take-away. Fast food restaurants are traditionally separated by their ability to serve food via a drive-through.
+</p>
+</div>
+</section>
+<!--x----- SHOP BY CATEGORY SECTION -----x-->
+{% endblock %}

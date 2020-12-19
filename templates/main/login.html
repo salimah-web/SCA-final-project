@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='authenticate.css') }}">
+{% endblock %}
+{% block menu_list %}
+    <li class="home"><a href="{{ url_for('homepage') }}" class="active">Home</a></li>
+    <li class="food"><a href="{{ url_for('food') }}">Food</a></li>
+    <li class="product"><a href="{{ url_for('product') }}">Products</a></li>
+    
+    {% endblock %}
+{% block body %}
+<div class="authenticate-container">
+    <h2>Login Now</h2>
+    <form class="form-control" method="post" action="{{ url_for('login') }}">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                {% for category, message in messages %}
+                    <li class="{{category}}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" class="form-input">
+        </div>
+        <div class="input-container">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" class="form-input">
+        </div>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Create one...</a></p>
+        <button type="submit" class="login-button">Login Now</button>
+    </form>
+</div>
+{% endblock %}
